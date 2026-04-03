@@ -1,0 +1,70 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cambium}[2026/04/03 Cambium Analytics proposal style]
+
+\RequirePackage[margin=1in]{geometry}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage{xcolor}
+\RequirePackage{setspace}
+\RequirePackage{array}
+\RequirePackage{booktabs}
+\RequirePackage{longtable}
+\RequirePackage{tabularx}
+\RequirePackage{hyperref}
+\RequirePackage{fancyhdr}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage{lastpage}
+
+\input{../../assets/branding/colors.tex}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=CambiumGreen,
+    urlcolor=CambiumGreen
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textcolor{CambiumGray}{Cambium Analytics}}
+\rhead{\textcolor{CambiumGray}{\ProjectCode}}
+\cfoot{\textcolor{CambiumGray}{Page \thepage\ of \pageref{LastPage}}}
+
+\titleformat{\section}
+  {\large\bfseries\color{CambiumGreen}}
+  {\thesection}{0.75em}{}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{CambiumGreen}}
+  {\thesubsection}{0.75em}{}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.7em}
+\setstretch{1.08}
+
+\newcommand{\CambiumTitlePage}{
+    \begin{titlepage}
+        \centering
+        {\Huge\bfseries \CompanyName \par}
+        \vspace{0.7cm}
+        {\Large Proposal and Timeline Document\par}
+        \vspace{1.2cm}
+        {\LARGE\bfseries \ProjectTitle \par}
+        \vspace{1.2cm}
+
+        \renewcommand{\arraystretch}{1.3}
+        \begin{tabular}{>{\bfseries}p{4cm}p{8.5cm}}
+            Client & \ClientName \\
+            Project Code & \ProjectCode \\
+            Prepared By & \PreparedBy \\
+            Date & \PreparedDate \\
+            Version & \VersionNumber \\
+            Estimated Effort & \EstimatedHours \\
+            Estimated Duration & \ProjectDuration \\
+        \end{tabular}
+
+        \vfill
+        {\large\textcolor{CambiumGray}{Confidential}} \par
+    \end{titlepage}
+}

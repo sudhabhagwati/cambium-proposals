@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{article}
+
+\newcommand{\CompanyName}{Cambium Analytics}
+\newcommand{\ClientName}{Client Name}
+\newcommand{\ProjectTitle}{Commercial Quote}
+\newcommand{\ProjectCode}{CA-2026-001}
+\newcommand{\PreparedBy}{Sudha Bhagwati}
+\newcommand{\PreparedDate}{3 April 2026}
+\newcommand{\VersionNumber}{v1.0}
+\newcommand{\EstimatedHours}{160 hours}
+\newcommand{\ProjectDuration}{16 weeks}
+
+\usepackage{templates/cambium}
+
+\begin{document}
+
+\CambiumTitlePage
+
+\section{Commercial Quote Summary}
+
+\begin{tabularx}{\textwidth}{p{6cm}X}
+\toprule
+\textbf{Item} & \textbf{Value} \\
+\midrule
+Client & \ClientName \\
+Project Title & \ProjectTitle \\
+Project Code & \ProjectCode \\
+Estimated Effort & \EstimatedHours \\
+Estimated Duration & \ProjectDuration \\
+Consulting Rate & SGD XXX / hour \\
+Estimated Total & SGD XXXXX \\
+\bottomrule
+\end{tabularx}
+
+\section{Pricing Notes}
+\begin{itemize}[leftmargin=1.5em]
+    \item Final pricing depends on confirmed scope
+    \item Major additions may require revised estimates
+    \item Taxes and payment terms can be added here
+\end{itemize}
+
+\section{Validity}
+This quote is valid for 30 days from the date of issue unless otherwise stated.
+
+\section{Contact}
+\textbf{Cambium Analytics}\\
+Prepared by: \PreparedBy\\
+Email: your-email@example.com
+
+\end{document}
