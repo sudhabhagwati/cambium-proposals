@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{cambium}[2026/04/03 Cambium Analytics proposal style]
+\ProvidesPackage{cambium}[2026/04/15 Cambium Analytics proposal style]
 
 \RequirePackage[margin=1in]{geometry}
 \RequirePackage[T1]{fontenc}
@@ -17,7 +17,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{lastpage}
 
-\input{../../assets/branding/colors.tex}
+\InputIfFileExists{cambium-colors.tex}{}{\errmessage{cambium-colors.tex not found}}
 
 \hypersetup{
     colorlinks=true,
